@@ -12,9 +12,17 @@ public class TestaMetodo {
 		System.out.println(contaDaDay.saldo);
 		System.out.println(conseguiuRetirar);
 		
+		Conta contaDoDavi = new Conta();
+		contaDoDavi.deposita(1000);
 		
-		
+		 boolean sucessoTransferencia = contaDoDavi.transfere(300, contaDaDay);
+	        if(sucessoTransferencia) {
+	            System.out.println("transferencia com sucesso");
+	        } else {
+	            System.out.println("faltou dinheiro");
 
+	        }
+	        System.out.println(contaDoDavi.saldo);
+	        System.out.println(contaDaDay.saldo); 
+	    }
 	}
-
-}
